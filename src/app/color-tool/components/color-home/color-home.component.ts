@@ -9,6 +9,12 @@ export class ColorHomeComponent implements OnInit {
 
   public message = 'Color Tool';
 
+  public colors = [
+    { id: 1, name: 'red' },
+    { id: 2, name: 'blue' },
+    { id: 3, name: 'green' },
+  ];
+
   constructor() { }
 
   ngOnInit() {
