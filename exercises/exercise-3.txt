@@ -1,0 +1,9 @@
+Exercise #3
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Add a new car form to the Car Home component.
+
+2. Collect the make, model, year, color, price.
+
+3. Display the collected form data in the console when click 'Add Car' button.
