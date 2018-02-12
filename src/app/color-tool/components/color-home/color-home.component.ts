@@ -36,6 +36,11 @@ export class ColorHomeComponent implements OnInit {
 
   addColor() {
     console.log(this.colorForm.value);
+
+    this.colors = this.colors.concat({
+      id: Math.max(...this.colors.map(c => c.id)) + 1,
+      name: this.colorForm.value.colorName
+    });
   }
 
 }
