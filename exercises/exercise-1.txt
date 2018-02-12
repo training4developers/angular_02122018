@@ -1,0 +1,15 @@
+Exercise #1
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Create a Car Tool module.
+
+ng generate module car-tool
+
+2. Create a Car Home component
+
+ng g component car-tool/components/car-home
+
+3. Display "Car Tool" as the header of the Car Home component.
+
+4. Display the Car Home component beneath the Color Home component.

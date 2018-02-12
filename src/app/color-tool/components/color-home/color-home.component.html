@@ -2,3 +2,13 @@
 <ul>
   <li *ngFor="let color of colors">{{color.id}} {{color.name}}</li>
 </ul>
+<form [formGroup]="colorForm">
+
+  <div>
+    <label for="color-name-input">Color Name:</label>
+    <input type="text" id="color-name-input" formControlName="colorName">
+  </div>
+
+  <button type="button" (click)="addColor()">Add Color</button>
+
+</form>

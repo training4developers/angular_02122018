@@ -1,0 +1,15 @@
+Exercise #2
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Create an array of TWO car objects similar to what we created with colors.
+
+Id
+Make
+Model
+Year
+Color
+Price
+
+2. In Car Home component, display a table of cars. Use the array of car objects to display an HTML TABLE of cars.
+
