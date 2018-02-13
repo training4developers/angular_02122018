@@ -1,0 +1,11 @@
+Exercise #8
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Add an "Actions" column to the table.
+
+2. On EACH row, add an additional column with a button whose label is "Delete".
+
+3. When the "Delete" button is clicked, remove the car for that row from the cars array.
+
+4. Verify the table is updated, and the car row has been removed.
