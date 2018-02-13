@@ -124,12 +124,6 @@
       "",
       "camelCase"
     ],
-    "component-selector": [
-      true,
-      "element",
-      "",
-      "kebab-case"
-    ],
     "angular-whitespace": [true, "check-interpolation"],
     "no-output-on-prefix": true,
     "use-input-property-decorator": true,

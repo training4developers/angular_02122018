@@ -1,7 +1,5 @@
 <tool-header headerText="Color Tool"></tool-header>
-<ul>
-  <li *ngFor="let color of colors">{{color.id}} {{color.name}}</li>
-</ul>
+<color-list [colorList]="colors"></color-list>
 <form [formGroup]="colorForm">
 
   <div>

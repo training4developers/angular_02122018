@@ -1,4 +1,4 @@
-<h1>{{message}}</h1>
+<tool-header headerText="Car Tool"></tool-header>
 
 <table>
   <thead>
@@ -11,13 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let car of cars">
-      <td>{{car.make}}</td>
-      <td>{{car.model}}</td>
-      <td>{{car.year}}</td>
-      <td>{{car.color}}</td>
-      <td>{{car.price}}</td>
-    </tr>
+    <tr view-car-row *ngFor="let car of cars" [car]="car"></tr>
   </tbody>
 </table>
 

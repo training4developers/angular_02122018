@@ -1,0 +1,13 @@
+Exercise #5
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Create a new component named Car Table
+
+2. Pass the array of cars into Car Table as an input
+
+3. Replace the table in Car Home with the new Car Table component
+
+<car-table [cars]="cars"></car-table>
+
+4. Verify it all works.

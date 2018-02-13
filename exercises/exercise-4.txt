@@ -1,0 +1,11 @@
+Exercise #4
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Create a Tool Header component for the Car Tool
+
+2. Replace the header in the Car Home component with the Tool Header component
+
+3. Pass in the text "Car Tool" to the new Tool Header component
+
+4. Run the code, make sure it works and make sure nothing else broke in the process
