@@ -15,6 +15,8 @@ export class ColorHomeComponent implements OnInit {
     { id: 3, name: 'green' },
   ];
 
+  public age = 104;
+
 
   ngOnInit() {
   }
@@ -24,6 +26,10 @@ export class ColorHomeComponent implements OnInit {
       id: Math.max(...this.colors.map(c => c.id)) + 1,
       ...newColor
     });
+  }
+
+  showValue(someValue: any) {
+    console.log(someValue);
   }
 
 }

@@ -1,3 +1,5 @@
 <tool-header headerText="Color Tool"></tool-header>
 <color-list [colorList]="colors"></color-list>
 <color-form (saveColor)="addColor($event)"></color-form>
+<span>{{age}}</span>
+<button (click)="showValue(colors)">Show Value</button>

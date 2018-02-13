@@ -1,0 +1,7 @@
+Exercise #6
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Move each table row to its own component.
+
+4. Verify it all works.
