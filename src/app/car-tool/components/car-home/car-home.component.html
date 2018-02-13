@@ -1,6 +1,6 @@
 <tool-header headerText="Car Tool"></tool-header>
 
-<car-table [cars]="cars"></car-table>
+<car-table [cars]="cars" (removeCar)="deleteCar($event)"></car-table>
 
 <form [formGroup]="carForm">
 

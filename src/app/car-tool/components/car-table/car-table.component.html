@@ -9,6 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr view-car-row *ngFor="let car of cars" [car]="car"></tr>
+      <tr view-car-row *ngFor="let car of cars"
+        [car]="car" (removeCar)="deleteCar($event)"></tr>
     </tbody>
   </table>

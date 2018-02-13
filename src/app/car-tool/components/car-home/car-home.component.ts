@@ -49,4 +49,8 @@ export class CarHomeComponent implements OnInit {
     });
   }
 
+  deleteCar(carId: number) {
+    this.cars = this.cars.filter(c => c.id !== carId);
+  }
+
 }
