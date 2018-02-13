@@ -1,12 +1,3 @@
 <tool-header headerText="Color Tool"></tool-header>
 <color-list [colorList]="colors"></color-list>
-<form [formGroup]="colorForm">
-
-  <div>
-    <label for="color-name-input">Color Name:</label>
-    <input type="text" id="color-name-input" formControlName="colorName">
-  </div>
-
-  <button type="button" (click)="addColor()">Add Color</button>
-
-</form>
+<color-form (saveColor)="addColor($event)"></color-form>

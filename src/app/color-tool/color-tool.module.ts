@@ -5,12 +5,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ColorHomeComponent } from './components/color-home/color-home.component';
 import { ToolHeaderComponent } from './components/tool-header/tool-header.component';
 import { ColorListComponent } from './components/color-list/color-list.component';
+import { ColorFormComponent } from './components/color-form/color-form.component';
 
 @NgModule({
   imports: [
     CommonModule, ReactiveFormsModule,
   ],
-  declarations: [ColorHomeComponent, ToolHeaderComponent, ColorListComponent],
+  declarations: [ColorHomeComponent, ToolHeaderComponent, ColorListComponent, ColorFormComponent],
   // exports the component to be used in a template outside of the module
   exports: [ColorHomeComponent],
 })
