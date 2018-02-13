@@ -1,19 +1,6 @@
 <tool-header headerText="Car Tool"></tool-header>
 
-<table>
-  <thead>
-    <tr>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Year</th>
-      <th>Color</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr view-car-row *ngFor="let car of cars" [car]="car"></tr>
-  </tbody>
-</table>
+<car-table [cars]="cars"></car-table>
 
 <form [formGroup]="carForm">
 
