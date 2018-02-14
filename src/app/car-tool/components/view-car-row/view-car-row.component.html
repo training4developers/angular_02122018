@@ -1,0 +1,9 @@
+<td>{{car.make}}</td>
+<td>{{car.model}}</td>
+<td>{{car.year}}</td>
+<td>{{car.color}}</td>
+<td>{{car.price}}</td>
+<td>
+  <button type="button" (click)="doEditCar(car.id)">Edit</button>
+  <button type="button" (click)="doDeleteCar(car.id)">Delete</button>
+</td>

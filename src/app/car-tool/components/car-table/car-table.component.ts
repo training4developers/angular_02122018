@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Car } from '../../models/car';
 
@@ -7,21 +7,39 @@ import { Car } from '../../models/car';
   templateUrl: './car-table.component.html',
   styleUrls: ['./car-table.component.css']
 })
-export class CarTableComponent implements OnInit {
+export class CarTableComponent {
+
+  @Input()
+  public editCarId = 0;
 
   @Input()
   public cars: Car[] = [];
 
   @Output()
-  public removeCar = new EventEmitter<number>();
+  public editCar = new EventEmitter<number>();
 
-  constructor() { }
+  @Output()
+  public deleteCar = new EventEmitter<number>();
 
-  ngOnInit() {
+  @Output()
+  public saveCar = new EventEmitter<Car>();
+
+  @Output()
+  public cancelCar = new EventEmitter<void>();
+
+  public doEditCar(carId: number) {
+    this.editCar.emit(carId);
   }
 
-  deleteCar(carId: number) {
-    this.removeCar.emit(carId);
+  public doDeleteCar(carId: number) {
+    this.deleteCar.emit(carId);
   }
 
+  public doSaveCar(car: Car) {
+    this.saveCar.emit(car);
+  }
+
+  public doCancelCar() {
+    this.cancelCar.emit();
+  }
 }

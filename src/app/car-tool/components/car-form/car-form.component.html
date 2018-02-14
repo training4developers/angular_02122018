@@ -1,0 +1,30 @@
+<form [formGroup]="carForm">
+
+  <div>
+    <label for="make-input">Make:</label>
+    <input type="text" id="makeInput" formControlName="make">
+  </div>
+
+  <div>
+    <label for="model-input">Model:</label>
+    <input type="text" id="modelInput" formControlName="model">
+  </div>
+
+  <div>
+    <label for="year-input">Year:</label>
+    <input type="number" id="yearInput" formControlName="year">
+  </div>
+
+  <div>
+    <label for="color-input">Color:</label>
+    <input type="text" id="colorInput" formControlName="color">
+  </div>
+
+  <div>
+    <label for="price-input">Price:</label>
+    <input type="number" id="priceInput" formControlName="price">
+  </div>
+
+  <button type="button" (click)="doSubmitCar()">Submit Car</button>
+
+</form>

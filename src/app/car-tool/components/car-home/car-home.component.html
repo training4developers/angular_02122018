@@ -1,34 +1,6 @@
 <tool-header headerText="Car Tool"></tool-header>
-
-<car-table [cars]="cars" (removeCar)="deleteCar($event)"></car-table>
-
-<form [formGroup]="carForm">
-
-  <div>
-    <label for="make-input">Make:</label>
-    <input type="text" id="makeInput" formControlName="make">
-  </div>
-
-  <div>
-    <label for="model-input">Model:</label>
-    <input type="text" id="modelInput" formControlName="model">
-  </div>
-
-  <div>
-    <label for="year-input">Year:</label>
-    <input type="number" id="yearInput" formControlName="year">
-  </div>
-
-  <div>
-    <label for="color-input">Color:</label>
-    <input type="text" id="colorInput" formControlName="color">
-  </div>
-
-  <div>
-    <label for="price-input">Price:</label>
-    <input type="number" id="priceInput" formControlName="price">
-  </div>
-
-  <button type="button" (click)="addCar()">Add Car</button>
-
-</form>
+<car-table [cars]="cars" [editCarId]="editCarId"
+           (editCar)="doEditCar($event)" (deleteCar)="doDeleteCar($event)"
+           (saveCar)="doSaveCar($event)" (cancelCar)="doCancelCar()">
+</car-table>
+<car-form (submitCar)="doSaveCar($event)"></car-form>
