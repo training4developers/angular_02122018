@@ -9,11 +9,39 @@ import { Car } from '../../models/car';
 })
 export class CarTableComponent {
 
+  private localCars: Car[] = [];
+
   @Input()
   public editCarId = 0;
 
   @Input()
-  public cars: Car[] = [];
+  public set cars(newCars: Car[]) {
+
+    if (newCars !== this.localCars) {
+      this.filterCache = {};
+      this.localCars = newCars;
+    }
+
+  }
+
+  public makeFilter = '';
+  public filterCache: any = {};
+
+  public get filteredCars() {
+
+
+    if (!this.filterCache[this.makeFilter]) {
+
+      console.log('called filtered cars');
+
+      this.filterCache[this.makeFilter] = this.localCars.filter(car =>
+        this.makeFilter.length === 0 || car.make.startsWith(this.makeFilter));
+
+    }
+
+    return this.filterCache[this.makeFilter];
+
+  }
 
   @Output()
   public editCar = new EventEmitter<number>();

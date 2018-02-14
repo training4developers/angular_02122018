@@ -14,7 +14,9 @@ export class CarHomeComponent {
 
   public cars: Car[] = [
     { id: 1, make: 'Chevrolet', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },
-    { id: 2, make: 'Chevrolet', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
+    { id: 2, make: 'Ford', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
+    { id: 3, make: 'Lexus', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },
+    { id: 4, make: 'Ford', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
   ];
 
   private insertCar(car: Car) {
