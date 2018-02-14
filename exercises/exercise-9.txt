@@ -1,0 +1,22 @@
+Exercise #9
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Create a new pipe in the shared module named myEllipsis
+
+Arguments:
+  1. value piped into it
+  2. length of text to display
+
+2. If the length of the text is greater than the length of text to display, replace the text which comes after the length to display with an ellipsis '...'
+
+This is fun!
+
+value | myEllipsis:5
+This ...
+
+value | myEllipsis:7
+This is...
+
+value | myEllipsis:20
+This is fun!

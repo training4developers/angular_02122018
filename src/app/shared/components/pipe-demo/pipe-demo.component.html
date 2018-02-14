@@ -6,4 +6,4 @@
 <textarea rows="5" cols="40" [(ngModel)]="message"></textarea>
 <p>Message Length: {{message?.length}}</p>
 
-<p>{{message}}</p>
+<p>{{message | myEllipsis:5}}</p>
