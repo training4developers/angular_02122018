@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Car } from '../../models/car';
 
@@ -19,7 +19,7 @@ export class CarFormComponent implements OnInit {
 
   public ngOnInit() {
     this.carForm = this.fb.group({
-      make: [''],
+      make: ['', Validators.required ],
       model: [''],
       year: [1900],
       color: [''],

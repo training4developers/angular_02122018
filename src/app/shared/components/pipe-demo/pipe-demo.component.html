@@ -7,3 +7,10 @@
 <p>Message Length: {{message?.length}}</p>
 
 <p>{{message | myEllipsis:5}}</p>
+
+<div>{{firstName | uppercase}}</div>
+<div>{{firstName | titlecase}}</div>
+<div>{{currentDate | date:'shortTime'}}</div>
+<div>{{amount | currency:'CAD':'code':'6.2-2'}}</div>
+<div>{{person | json}}</div>
+<div>{{colors | slice:2}}</div>
