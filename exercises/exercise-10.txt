@@ -1,0 +1,17 @@
+Exercise #10
+
+URL: https://github.com/training4developers/angular_02122017
+
+1. Add the currency pipe to your table of cars. Add to the price field.
+
+EUR20000.00
+
+2. Use the TitleCase pipe to ensure the color starts with an uppercase character.
+
+3. Set the make, model and year fields to required. Display a message using CSS
+if the field is empty and touched.
+
+4. Ensure that the year and price are being collected as numbers. Verify
+the input type for the form is set to a number.
+
+5. Verify everything works.

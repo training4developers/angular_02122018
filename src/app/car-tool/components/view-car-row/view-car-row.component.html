@@ -1,8 +1,8 @@
 <td>{{car.make}}</td>
 <td>{{car.model}}</td>
 <td>{{car.year}}</td>
-<td>{{car.color}}</td>
-<td>{{car.price}}</td>
+<td>{{car.color | titlecase}}</td>
+<td>{{car.price | currency:'EUR':'code':'4.2-2'}}</td>
 <td>
   <button type="button" (click)="editCar.emit(car.id)">Edit</button>
   <button type="button" (click)="deleteCar.emit(car.id)">Delete</button>

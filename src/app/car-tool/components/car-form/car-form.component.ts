@@ -20,8 +20,8 @@ export class CarFormComponent implements OnInit {
   public ngOnInit() {
     this.carForm = this.fb.group({
       make: ['', Validators.required ],
-      model: [''],
-      year: [1900],
+      model: ['', Validators.required],
+      year: [1900, Validators.required],
       color: [''],
       price: [0],
     });
@@ -29,8 +29,16 @@ export class CarFormComponent implements OnInit {
 
   public doSubmitCar() {
 
-    this.submitCar.emit({ ...this.carForm.value });
-    this.carForm.reset();
+    console.log(this.carForm.value);
+
+    if (this.carForm.valid) {
+      this.submitCar.emit({ ...this.carForm.value });
+      this.carForm.reset();
+    } else {
+      console.log('please fix the form');
+    }
+
+
   }
 
 }
