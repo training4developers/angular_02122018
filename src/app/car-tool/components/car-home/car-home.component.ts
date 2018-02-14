@@ -11,7 +11,6 @@ import { Car } from '../../models/car';
 export class CarHomeComponent {
 
   public editCarId = 0;
-  public carForm: FormGroup;
 
   public cars: Car[] = [
     { id: 1, make: 'Chevrolet', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },

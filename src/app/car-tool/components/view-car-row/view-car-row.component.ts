@@ -18,12 +18,4 @@ export class ViewCarRowComponent {
   @Output()
   public deleteCar = new EventEmitter<number>();
 
-  public doEditCar(carId: number) {
-    this.editCar.emit(carId);
-  }
-
-  public doDeleteCar(carId: number) {
-    this.deleteCar.emit(carId);
-  }
-
 }
