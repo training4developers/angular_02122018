@@ -26,9 +26,9 @@ export class CarHomeComponent {
   }
 
   private replaceCar(car: Car) {
-    
+
     const carIndex = this.cars.findIndex(c => c.id === car.id);
-    
+
     this.cars = [
       ...this.cars.slice(0, carIndex),
       car,
