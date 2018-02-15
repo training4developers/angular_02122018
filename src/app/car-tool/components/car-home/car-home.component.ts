@@ -3,21 +3,33 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { Car } from '../../models/car';
 
-@Component({
-  selector: 'car-home',
-  templateUrl: './car-home.component.html',
-  styleUrls: ['./car-home.component.css']
-})
-export class CarHomeComponent {
+class CarsService {
 
-  public editCarId = 0;
-
-  public cars: Car[] = [
+  private cars: Car[] = [
     { id: 1, make: 'Chevrolet', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },
     { id: 2, make: 'Ford', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
     { id: 3, make: 'Lexus', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },
     { id: 4, make: 'Ford', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
   ];
+
+  all() {
+    return this.cars;
+  }
+
+}
+
+@Component({
+  selector: 'car-home',
+  templateUrl: './car-home.component.html',
+  styleUrls: ['./car-home.component.css'],
+  providers: [ CarsService ],
+})
+export class CarHomeComponent {
+
+  public editCarId = 0;
+  public cars: Car[];
+
+  constructor(private carsSvc: CarsService) { }
 
   private insertCar(car: Car) {
     this.cars = this.cars.concat({

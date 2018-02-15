@@ -1,12 +1,12 @@
 Exercise #11
 
-URL: https://github.com/training4developers/angular_02122017
+URL: https://github.com/training4developers/angular_02122018
 
 1. In the Car Home component file, create a new service named CarsService.
 
 2. Move the cars array data from Car Home, and store it in CarsService.
 
-3. Add a function named "all" to the CarsService.
+3. Add a function named "all" to the CarsService. The "all" function should return all of the cars.
 
 4. Update the Car Home component to use the CarsService service and call the "all" function to retrieve all of the cars.
 
