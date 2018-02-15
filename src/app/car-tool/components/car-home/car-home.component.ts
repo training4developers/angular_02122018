@@ -4,6 +4,17 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Car } from '../../models/car';
 import { CarsService } from '../../services/cars.service';
 
+const localCars = {
+  _cars: [ {
+    id: 1, make: 'Tesla', model: 'S',
+    year: 2017, color:'blue', price: 100.00
+  }],
+
+  all() {
+    return this._cars;
+  }
+};
+
 @Component({
   selector: 'car-home',
   templateUrl: './car-home.component.html',
@@ -14,7 +25,16 @@ export class CarHomeComponent {
   public editCarId = 0;
   public cars: Car[];
 
-  constructor(private carsSvc: CarsService) { }
+  constructor(private carsSvc: CarsService) {
+
+    console.log(this.carsSvc.all());
+  }
+
+  public ngOnInit() {
+    this.carsSvc.all().then(cars => {
+      this.cars = cars;
+    });
+  }
 
   private insertCar(car: Car) {
     this.cars = this.cars.concat({

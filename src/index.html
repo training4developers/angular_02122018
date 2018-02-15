@@ -9,5 +9,156 @@
 </head>
 <body>
   <app-root></app-root>
+
+  <script>
+
+    // const p1 = new Promise(resolve => setTimeout(() => resolve('a'), 2000));
+    // const p2 = new Promise(resolve => setTimeout(() => resolve('b'), 4000));
+    // const p3 = new Promise(resolve => setTimeout(() => resolve('c'), 6000));
+    // const p4 = new Promise(resolve => setTimeout(() => resolve('d'), 8000));
+
+    // p1.then(result => console.log(result + ' finished'));
+    // p2.then(result => console.log(result + ' finished'));
+    // p3.then(result => console.log(result + ' finished'));
+    // p4.then(result => console.log(result + ' finished'));
+
+    // Promise.all([ p1, p2, p3, p4 ]).then(results => {
+    //   console.log(results);
+    //   console.log('all done');
+    // });
+
+  </script>
+
+  <script>
+
+    // const youngMan = new Promise(function youngLady(resolve, reject) {
+
+    //   setTimeout(function() {
+    //     resolve('she is madly in love with him!');
+    //   }, 2000);
+
+    // });
+
+    // youngMan.then(function(result) {
+    //   console.log(result);
+    //   console.log('yay! she said yes!');
+
+    //   return new Promise(function(resolve) {
+    //     setTimeout(function() {
+    //       resolve('found a place to tie the knot...');
+    //     }, 2000);
+    //   });
+
+    // })
+    // .then(function(result) {
+
+    //   console.log(result);
+    //   console.log('ready to go!');
+
+    // })
+    // .catch(function(result) {
+    //   console.log(result);
+    //   console.log('sadly, she said no... time to sign up for eHarmony!');
+    // });
+
+    // console.log('young man is waiting...');
+
+  </script>
+
+
+
+  <script>
+
+    // (function() {
+    //   var g = 2;
+    //   console.log('fun!');
+    // })();
+
+    // function doIt(fn) {
+    //   fn('test');
+    // }
+
+    // doIt(function(msg) {
+    //   console.log(msg);
+    // });
+
+
+    // setTimeout(function() {
+    //   console.log('a');
+
+    //   setTimeout(function() {
+    //     console.log('b');
+
+    //     setTimeout(function() {
+    //       console.log('c');
+    //     }, 1000);
+
+    //   }, 1000);
+
+    // }, 2000);
+
+    // let counter = 0;
+
+    // function allDone() {
+    //   console.log('all done');
+    // }
+
+    // counter++;
+    //  setTimeout(function() {
+    //    console.log('a');
+    //    counter--;
+    //    if (counter === 0) {
+    //      allDone();
+    //    }
+    //  }, 2000)
+
+    // counter++;
+    //  setTimeout(function() {
+    //    console.log('b');
+    //    counter--;
+    //    if (counter === 0) {
+    //      allDone();
+    //    }
+    //  }, 4000)
+
+    // counter++;
+    //  setTimeout(function() {
+    //    console.log('c');
+    //    counter--;
+    //    if (counter === 0) {
+    //      allDone();
+    //    }
+    //  }, 6000)
+
+  </script>
+
+
+  <script>
+
+
+    // function outer() {
+
+    //   var t = 2;
+
+    //   setTimeout(function() {
+    //     t = 4;
+    //   }, 2000);
+
+    //   return function inner() {
+    //     console.log(t);
+    //   };
+    // }
+
+    // var fn = outer();
+    // fn();
+
+    // setTimeout(function() {
+    //   fn();
+    // }, 4000);
+
+
+
+
+  </script>
 </body>
 </html>

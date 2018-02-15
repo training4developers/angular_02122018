@@ -15,6 +15,31 @@
       "color": "red",
       "price": 15000,
       "id": 2
+    },
+    {
+      "make": "Lexus",
+      "model": "IS350",
+      "year": 2008,
+      "color": "black",
+      "price": 50000,
+      "id": 3
+    }
+  ],
+  "cats": [
+    {
+      "id": 1,
+      "name": "Callie",
+      "color": "black"
+    },
+    {
+      "id": 2,
+      "name": "Lilybean",
+      "color": "black"
+    },
+    {
+      "id": 3,
+      "name": "Pumpkin",
+      "color": "orange"
     }
   ]
 }

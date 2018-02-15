@@ -1,0 +1,8 @@
+Exercise #12
+
+URL: https://github.com/training4developers/angular_02122018
+
+1. Move the insert/delete/update/replace/whatever car array operations to the Cars Service.
+
+2. Ensure all operations work correctly in the application.
+
