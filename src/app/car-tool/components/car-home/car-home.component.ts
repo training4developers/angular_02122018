@@ -2,27 +2,12 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { Car } from '../../models/car';
-
-class CarsService {
-
-  private cars: Car[] = [
-    { id: 1, make: 'Chevrolet', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },
-    { id: 2, make: 'Ford', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
-    { id: 3, make: 'Lexus', model: 'Volt', year: 2017, color: 'blue', price: 21000.00 },
-    { id: 4, make: 'Ford', model: 'Bolt', year: 2018, color: 'red', price: 31000.00 },
-  ];
-
-  all() {
-    return this.cars;
-  }
-
-}
+import { CarsService } from '../../services/cars.service';
 
 @Component({
   selector: 'car-home',
   templateUrl: './car-home.component.html',
   styleUrls: ['./car-home.component.css'],
-  providers: [ CarsService ],
 })
 export class CarHomeComponent {
 

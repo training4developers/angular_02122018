@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { CarsService } from './services/cars.service';
+
 import { CarHomeComponent } from './components/car-home/car-home.component';
 import { ToolHeaderComponent } from './components/tool-header/tool-header.component';
 import { ViewCarRowComponent } from './components/view-car-row/view-car-row.component';
@@ -10,14 +12,13 @@ import { EditCarRowComponent } from './components/edit-car-row/edit-car-row.comp
 import { CarFormComponent } from './components/car-form/car-form.component';
 
 @NgModule({
-  imports: [
-    CommonModule, ReactiveFormsModule, FormsModule,
-  ],
+  imports: [ CommonModule, ReactiveFormsModule, FormsModule ],
   declarations: [
     CarHomeComponent, ToolHeaderComponent,
     CarFormComponent, CarTableComponent,
     ViewCarRowComponent, EditCarRowComponent,
   ],
   exports: [CarHomeComponent],
+  providers: [ CarsService ],
 })
 export class CarToolModule { }
