@@ -7,12 +7,20 @@ import { PipeDemoComponent } from './components/pipe-demo/pipe-demo.component';
 import { MyAppendPipe } from './pipes/my-append.pipe';
 import { MyEllipsisPipe } from './pipes/my-ellipsis.pipe';
 import { FormDemoComponent } from './components/form-demo/form-demo.component';
+import { ServiceDemoComponent } from './components/service-demo/service-demo.component';
 
 @NgModule({
   imports: [
     CommonModule, FormsModule,
   ],
-  declarations: [MyCapitalizePipe, PipeDemoComponent, MyAppendPipe, MyEllipsisPipe, FormDemoComponent],
-  exports: [PipeDemoComponent, FormDemoComponent],
+  declarations: [
+    MyCapitalizePipe, PipeDemoComponent, MyAppendPipe,
+    MyEllipsisPipe, FormDemoComponent, ServiceDemoComponent
+  ],
+  exports: [
+    PipeDemoComponent,
+    FormDemoComponent,
+    ServiceDemoComponent
+  ],
 })
 export class SharedModule { }
