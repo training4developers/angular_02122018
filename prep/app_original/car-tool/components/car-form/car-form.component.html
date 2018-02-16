@@ -1,0 +1,41 @@
+<form [formGroup]="carForm">
+
+  <div *ngIf="carForm.invalid && carForm.touched">
+    Car Form is invalid.
+    <ul>
+      <li *ngIf="carForm.controls.make?.errors?.required">Car make is required.</li>
+    </ul>
+  </div>
+
+  <div>
+    <label for="make-input">Make:</label>
+    <input type="text" id="makeInput" formControlName="make">
+    <span>required</span>
+  </div>
+
+  <div>
+    <label for="model-input">Model:</label>
+    <input type="text" id="modelInput" formControlName="model">
+    <span>required</span>
+  </div>
+
+  <div>
+    <label for="year-input">Year:</label>
+    <input type="number" id="yearInput" formControlName="year">
+    <span>required</span>
+  </div>
+
+  <div>
+    <label for="color-input">Color:</label>
+    <input type="color" id="colorInput" formControlName="color">
+  </div>
+
+  <div>
+    <label for="price-input">Price:</label>
+    <input type="number" id="priceInput" formControlName="price">
+  </div>
+
+  <button type="button" (click)="doSubmitCar()"
+    [disabled]="carForm.invalid">Submit Car</button>
+
+</form>

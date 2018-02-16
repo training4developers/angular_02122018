@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
+import { AuthorizationTokenService } from './services/authorization-token.service';
 import { CarsService } from './services/cars.service';
 
 import { CarHomeComponent } from './components/car-home/car-home.component';
@@ -19,6 +20,6 @@ import { CarFormComponent } from './components/car-form/car-form.component';
     ViewCarRowComponent, EditCarRowComponent,
   ],
   exports: [CarHomeComponent],
-  providers: [ CarsService ],
+  providers: [ AuthorizationTokenService, CarsService ],
 })
 export class CarToolModule { }

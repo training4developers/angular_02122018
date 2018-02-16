@@ -1,0 +1,10 @@
+Exercise #12
+
+URL: https://github.com/training4developers/angular_02122018
+
+1. Use the HttpClient to retrieve the Cars from the REST service
+
+http://localhost:3050/cars
+
+
+2. Update Car Home to utilize a Promise object returned from the "all" function to populate the cars in the table.

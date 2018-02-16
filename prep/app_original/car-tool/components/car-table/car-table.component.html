@@ -1,0 +1,22 @@
+<form>
+  Make Filter: <input type="text" name="makeFilterInput" [(ngModel)]="makeFilter">
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Color</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-template ngFor [ngForOf]="filteredCars" let-car>
+      <tr view-car-row *ngIf="editCarId !== car.id" [car]="car"
+        (editCar)="doEditCar($event)" (deleteCar)="doDeleteCar($event)"></tr>
+      <tr edit-car-row *ngIf="editCarId === car.id" [car]="car"
+        (saveCar)="doSaveCar($event)" (cancelCar)="doCancelCar()"></tr>
+    </ng-template>
+  </tbody>
+</table>

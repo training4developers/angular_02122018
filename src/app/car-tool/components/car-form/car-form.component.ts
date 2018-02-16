@@ -2,13 +2,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Car } from '../../models/car';
-import { CarsService } from '../../services/cars.service';
 
 @Component({
   selector: 'car-form',
   templateUrl: './car-form.component.html',
   styleUrls: ['./car-form.component.css'],
-  providers: [ CarsService ],
 })
 export class CarFormComponent implements OnInit {
 
@@ -19,12 +17,9 @@ export class CarFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private carsSvc: CarsService,
   ) { }
 
   public ngOnInit() {
-
-    console.log(this.carsSvc.all());
 
     this.carForm = this.fb.group({
       make: ['', Validators.required ],

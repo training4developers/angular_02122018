@@ -1,0 +1,12 @@
+<ng-container [formGroup]="editCarForm">
+  <td><input type="text" formControlName="make"></td>
+  <td><input type="text" formControlName="model"></td>
+  <td><input type="number" formControlName="year"></td>
+  <td><input type="text" formControlName="color"></td>
+  <td><input type="number" formControlName="price"></td>
+  <td>
+    <button type="button" (click)="doSaveCar()">Save</button>
+    <button type="button" (click)="cancelCar.emit()">Cancel</button>
+  </td>
+</ng-container>
+

@@ -1,61 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 import { Car } from '../../models/car';
 import { CarsService } from '../../services/cars.service';
-
-const localCars = {
-  _cars: [ {
-    id: 1, make: 'Tesla', model: 'S',
-    year: 2017, color:'blue', price: 100.00
-  }],
-
-  all() {
-    return this._cars;
-  }
-};
 
 @Component({
   selector: 'car-home',
   templateUrl: './car-home.component.html',
   styleUrls: ['./car-home.component.css'],
 })
-export class CarHomeComponent {
+export class CarHomeComponent implements OnInit {
 
   public editCarId = 0;
-  public cars: Car[];
+  public cars: Car[] = [];
 
-  constructor(private carsSvc: CarsService) {
-
-    console.log(this.carsSvc.all());
-  }
+  constructor(private carsSvc: CarsService) { }
 
   public ngOnInit() {
-    this.carsSvc.all().then(cars => {
-      this.cars = cars;
-    });
+    this.refreshCars();
+  }
+
+  private refreshCars() {
+    return this.carsSvc.all().then(cars => this.cars = cars);
   }
 
   private insertCar(car: Car) {
-    this.cars = this.cars.concat({
-      ...car,
-      id: Math.max(...this.cars.map(c => c.id)) + 1,
-    });
+    return this.carsSvc.insert(car).then(() => this.refreshCars());
   }
 
   private replaceCar(car: Car) {
-
-    const carIndex = this.cars.findIndex(c => c.id === car.id);
-
-    this.cars = [
-      ...this.cars.slice(0, carIndex),
-      car,
-      ...this.cars.slice(carIndex + 1),
-    ];
+    return this.carsSvc.replace(car).then(() => this.refreshCars());
   }
 
   private doDeleteCar(carId: number) {
-    this.cars = this.cars.filter(c => c.id !== carId);
+    return this.carsSvc.delete(carId).then(() => this.refreshCars());
   }
 
   private doSaveCar(car: Car) {
