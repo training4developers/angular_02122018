@@ -1,0 +1,38 @@
+
+
+nav > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 2px solid blue;
+}
+
+nav > ul > li {
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  border-right: 2px solid blue;
+}
+
+nav > ul > li > a {
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  display:block;
+  margin:0px;
+  padding: 5px;
+}
+
+nav > ul > li > a:visited {
+  color: black;
+  margin:0px;
+  padding: 5px;
+}
+
+nav > ul > li > a.active {
+  color: white;
+  background-color: blue;
+  margin:0px;
+  padding: 5px;
+}

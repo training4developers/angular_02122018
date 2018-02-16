@@ -4,6 +4,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AuthorizationTokenService } from './services/authorization-token.service';
 import { CarsService } from './services/cars.service';
+import { DemoWebsocketService } from './services/demo-websocket.service';
 
 import { CarHomeComponent } from './components/car-home/car-home.component';
 import { ToolHeaderComponent } from './components/tool-header/tool-header.component';
@@ -20,6 +21,6 @@ import { CarFormComponent } from './components/car-form/car-form.component';
     ViewCarRowComponent, EditCarRowComponent,
   ],
   exports: [CarHomeComponent],
-  providers: [ AuthorizationTokenService, CarsService ],
+  providers: [ AuthorizationTokenService, CarsService, DemoWebsocketService ],
 })
 export class CarToolModule { }

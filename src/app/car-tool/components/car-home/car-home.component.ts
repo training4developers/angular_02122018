@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { Observable } from 'rxjs/Observable';
+import { map, filter } from 'rxjs/operators';
 
 import { Car } from '../../models/car';
 import { CarsService } from '../../services/cars.service';
+import { DemoWebsocketService } from '../../services/demo-websocket.service';
 
 @Component({
   selector: 'car-home',
@@ -14,14 +17,28 @@ export class CarHomeComponent implements OnInit {
   public editCarId = 0;
   public cars: Car[] = [];
 
-  constructor(private carsSvc: CarsService) { }
+  public nums: Observable<number>;
+
+  constructor(
+    private carsSvc: CarsService,
+    private demoWebSocketSvc: DemoWebsocketService,
+  ) { }
 
   public ngOnInit() {
     this.refreshCars();
+
+    // this.nums = this.demoWebSocketSvc.nums().pipe(
+    //   map(num => num),
+    //   filter(num => num > 10)
+    // );
+
+    // this.demoWebSocketSvc.nums().subscribe(num => {
+    //   console.log(num);
+    // });
   }
 
   private refreshCars() {
-    return this.carsSvc.all().then(cars => this.cars = cars);
+    return this.carsSvc.all().subscribe(cars => this.cars = cars);
   }
 
   private insertCar(car: Car) {

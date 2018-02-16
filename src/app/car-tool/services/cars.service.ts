@@ -14,26 +14,32 @@ export class CarsService extends BaseRestService {
     private httpClient: HttpClient,
     @Optional() authorizationToken: AuthorizationTokenService,
   ) {
-    super(environment.restUrl, 'cars', authorizationToken.getToken());
+    super(environment.restUrl, 'cars',
+      authorizationToken ? authorizationToken.getToken() : null);
   }
 
   public all() {
-    return this.httpClient.get<Car[]>(this.collectionUrl(), this.options()).toPromise();
+    return this.httpClient
+      .get<Car[]>(this.collectionUrl(), this.options());
   }
 
   public one(id: string | number) {
-    return this.httpClient.get<Car>(this.elementUrl(id), this.options()).toPromise();
+    return this.httpClient
+      .get<Car>(this.elementUrl(id), this.options()).toPromise();
   }
 
   public insert(car: Car) {
-    return this.httpClient.post<Car>(this.collectionUrl(), car, this.options()).toPromise();
+    return this.httpClient
+      .post<Car>(this.collectionUrl(), car, this.options()).toPromise();
   }
 
   public replace(car: Car) {
-    return this.httpClient.put<Car>(this.elementUrl(car.id), car, this.options()).toPromise();
+    return this.httpClient
+      .put<Car>(this.elementUrl(car.id), car, this.options()).toPromise();
   }
 
   public delete(id: string | number) {
-    return this.httpClient.delete<Car>(this.elementUrl(id), this.options()).toPromise();
+    return this.httpClient
+      .delete<Car>(this.elementUrl(id), this.options()).toPromise();
   }
 }
