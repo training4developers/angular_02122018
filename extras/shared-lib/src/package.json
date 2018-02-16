@@ -1,0 +1,40 @@
+{
+  "name": "shared-lib",
+  "version": "1.0.0",
+  "main": "../dist/index.js",
+  "types": "../dist/index.d.ts",
+  "scripts": {
+    "postinstall": "npm run build",
+    "clean": "rimraf ../dist",
+    "build": "npm run aot && npm run html && npm run rollup",
+    "build:watch": "chokidar \"ts/**/*.*\" -c \"npm run build\"",
+    "aot": "ngc -p ./ts/tsconfig-aot.json",
+    "html": "copyfiles -u 1 ts/**/*.html ts/**/*.css ../dist",
+    "rollup": "./node_modules/.bin/rollup -c rollup.config.js"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=4.0.0",
+    "@angular/core": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": ">=4.0.0",
+    "@angular/core": ">=4.0.0",
+    "@types/core-js": "0.9.41",
+    "chokidar": "1.7.0",
+    "chokidar-cli": "1.2.0",
+    "core-js": "2.4.1",
+    "rimraf": "2.6.1",
+    "rxjs": "5.4.3",
+    "typescript": "2.2.2",
+    "zone.js": "0.8.17",
+    "@angular/compiler": ">=4.0.0",
+    "@angular/compiler-cli": ">=4.0.0",
+    "copyfiles": "^1.2.0",
+    "rollup": "0.47.6",
+    "rollup-plugin-angular": "0.5.3",
+    "rollup-plugin-commonjs": "8.2.0",
+    "rollup-plugin-node-resolve": "3.0.0",
+    "rollup-plugin-string": "2.0.2",
+    "rollup-plugin-typescript2": "0.5.1"
+  }
+}

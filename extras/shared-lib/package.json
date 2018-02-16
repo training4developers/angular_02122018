@@ -1,0 +1,12 @@
+{
+  "name": "shared-lib",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "postinstall": "cd src && npm install",
+    "clean": "cd src && npm run clean",
+    "build": "cd src && npm run build",
+    "build:watch": "cd src && npm run build:watch"
+  }
+}

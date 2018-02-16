@@ -1,3 +1,6 @@
+import { environment} from '../../../environments/environment';
+
+
 export abstract class BaseRestService {
 
   protected constructor(
@@ -16,8 +19,9 @@ export abstract class BaseRestService {
 
   protected options() {
 
-    let headers: any = {
+    let headers = {
       'Content-Type': 'application/json',
+      'Authorization': this.authorizationToken,
     };
 
     if (this.authorizationToken) {

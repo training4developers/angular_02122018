@@ -1,0 +1,36 @@
+<form [formGroup]="form" (submit)="showFormValues()">
+  <div>
+    <label>First Name:</label>
+    <input type="text" formControlName="firstNameInput">
+  </div>
+
+  <div>
+    <label>Last Name:</label>
+    <input type="text" formControlName="lastNameInput">
+  </div>
+
+
+
+  <fieldset formGroupName="addressGroup">
+    <legend>Address</legend>
+
+    <div>
+      <label>Street:</label>
+      <input type="text" formControlName="streetInput">
+    </div>
+
+    <div>
+      <label>City:</label>
+      <input type="text" formControlName="cityInput">
+    </div>
+  </fieldset>
+
+  <button>Submit</button>
+</form>
+
+
+<div>
+  <label>Phone:</label>
+  <input type="tel" [(ngModel)]="phoneNumber">
+</div>
+

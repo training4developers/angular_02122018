@@ -23,6 +23,14 @@
       "color": "jlack",
       "price": 50000,
       "id": 3
+    },
+    {
+      "make": "s",
+      "model": "s",
+      "year": 1900,
+      "color": "#7dafca",
+      "price": 0,
+      "id": 4
     }
   ],
   "cats": [
@@ -40,6 +48,19 @@
       "id": 3,
       "name": "Pumpkin",
       "color": "orange"
+    },
+    {
+      "make": "Lexus",
+      "model": "IS350",
+      "year": 2008,
+      "color": "black",
+      "price": 50000,
+      "id": 4
+    },
+    {
+      "name": "Midnight",
+      "color": "gray",
+      "id": 5
     }
   ]
 }

@@ -1,13 +1,3 @@
-<!-- <div>{{nums | async}}</div> -->
-<!-- <ul>
-  <li *ngFor="let num of nums | async">
-    {{num}}
-  </li>
-</ul> -->
-
 <tool-header headerText="Car Tool"></tool-header>
-<car-table [cars]="cars" [editCarId]="editCarId"
-           (editCar)="doEditCar($event)" (deleteCar)="doDeleteCar($event)"
-           (saveCar)="doSaveCar($event)" (cancelCar)="doCancelCar()">
-</car-table>
-<car-form (submitCar)="doSaveCar($event)"></car-form>
+
+<router-outlet></router-outlet>

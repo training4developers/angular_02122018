@@ -1,0 +1,5 @@
+<car-table [cars]="cars" [editCarId]="editCarId"
+           (editCar)="doEditCar($event)" (deleteCar)="doDeleteCar($event)"
+           (saveCar)="doReplaceCar($event)" (cancelCar)="doCancelCar()">
+</car-table>
+<button type="button" (click)="doCreateCar()">Create Car</button>

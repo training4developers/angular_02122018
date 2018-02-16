@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, DoCheck } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { Car } from '../../models/car';
@@ -8,7 +8,7 @@ import { Car } from '../../models/car';
   templateUrl: './car-form.component.html',
   styleUrls: ['./car-form.component.css'],
 })
-export class CarFormComponent implements OnInit, DoCheck {
+export class CarFormComponent implements OnInit {
 
   public carForm: FormGroup = null;
 
@@ -28,10 +28,6 @@ export class CarFormComponent implements OnInit, DoCheck {
       color: [''],
       price: [0],
     });
-  }
-
-  public ngDoCheck() {
-    console.log('did a change detection cycle');
   }
 
   public doSubmitCar() {

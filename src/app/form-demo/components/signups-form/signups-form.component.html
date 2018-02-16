@@ -1,0 +1,21 @@
+<table [formGroup]="form">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>First Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-template formArrayName="signups" ngFor [ngForOf]="form.controls.signups.controls" let-signupForm>
+      <tr [formGroup]="signupForm">
+        <td><input type="text" formControlName="name"></td>
+        <td><input type="text" formControlName="email"></td>
+        <td><input type="checkbox" formControlName="firstTime"></td>
+      </tr>
+    </ng-template>
+  </tbody>
+
+</table>
+<button type="button" (click)="addSignup()">Add Signup</button>
+<button type="button" (click)="showSignups()">Show Signups</button>

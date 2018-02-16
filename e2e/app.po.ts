@@ -5,7 +5,21 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getHeaderText() {
+    return element(by.css('app-root e2e-items h2')).getText();
   }
+
+  getUnorderedListCount() {
+    return element(by.css('app-root e2e-items ul'))
+      .all(by.css('li')).count();
+  }
+
+  getNewItemInput() {
+    return element(by.css('input'));
+  }
+
+  getAddItemButton() {
+    return element(by.css('button'));
+  }
+
 }

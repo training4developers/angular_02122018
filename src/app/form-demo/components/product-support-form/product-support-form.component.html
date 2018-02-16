@@ -1,0 +1,31 @@
+<form [formGroup]="form">
+
+  <div>
+    <label>Product Serial Number:</label>
+    <input type="text" formControlName="serialNumberInput">
+    <span *ngIf="form.controls.serialNumberInput.errors?.serialNumber">
+      Invalid serial number
+    </span>
+    <span *ngIf="form.controls.serialNumberInput.errors?.required">
+      Please enter a serial number.
+    </span>
+  </div>
+
+</form>
+
+<form>
+
+  <div>
+    <label>Product Serial Number:</label>
+    <input type="text" [(ngModel)]="serialNumber"
+      name="serialNumberInput" #serialNumberInput="ngModel"
+      required serial-number>
+    <span *ngIf="serialNumberInput.errors?.serialNumber">
+      Invalid serial number
+    </span>
+    <span *ngIf="serialNumberInput.errors?.required">
+      Please enter a serial number.
+    </span>
+  </div>
+
+</form>

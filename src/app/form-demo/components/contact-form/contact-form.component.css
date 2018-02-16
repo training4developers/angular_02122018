@@ -1,0 +1,12 @@
+
+.ng-touched.ng-invalid {
+  border: 2px solid red;
+}
+
+input + span {
+  display:none;
+}
+
+input.ng-touched.ng-invalid + span {
+  display:inline;
+}
