@@ -1,0 +1,28 @@
+Exercise #14
+
+URL: https://github.com/training4developers/angular_02122018
+
+1. Create a REST service endpoint for a collection of My Little Ponies. For each pony, store the following info:
+
+https://mylittlepony.hasbro.com/en-us/parents/activities
+
+Id
+Name
+Color
+Superpower
+
+2. Create a new module named Pony Tool.
+
+3. Create a service which returns all ponies and one pony.
+
+For the all ponies only return id and name. For the one pony return all fields.
+
+4. Build a component which displays all ponies showing the id and name.
+
+5. Build a component which displays all of the details for one pony.
+
+6. Setup routing to allow viewing all of the ponies, then clicking a link to view one pony.
+
+Hint: setup the routing in the app.routing.ts file.
+
+So there should be a list route, and a view route.
